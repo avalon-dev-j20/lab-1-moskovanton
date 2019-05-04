@@ -3,6 +3,7 @@ package ru.avalon.java.j20.labs.tasks;
 import ru.avalon.java.j20.labs.Task;
 
 import java.util.Iterator;
+import ru.avalon.java.j20.labs.models.Fibonacci;
 
 /**
  * Задание №3
@@ -34,5 +35,8 @@ public class Task3 implements Task {
          * 4. С использованием отладчика проверьте корректность
          *    выполнения задания.
          */
+        int sum = 0;
+        Fibonacci fibonacci = new Fibonacci(20);
+        for(int e : fibonacci) sum += e;
     }
 }
