@@ -1,5 +1,6 @@
 package ru.avalon.java.j20.labs.tasks;
 
+import java.util.Arrays;
 import ru.avalon.java.j20.labs.Task;
 import ru.avalon.java.j20.labs.core.RandomArrayFactory;
 import ru.avalon.java.j20.labs.models.Numbers;
@@ -25,9 +26,9 @@ public class Task1 implements Task {
     @Override
     public void run() {
         int[] array = arrayFactory.getInstance(20);
-        int min = Numbers.min(array);
-        int max = Numbers.max(array);
-        double avg = Numbers.avg(array);
+        int min = Numbers.min(Arrays.stream(array).boxed().toArray(Integer[]::new));
+        int max = Numbers.max(Arrays.stream(array).boxed().toArray(Integer[]::new));
+        double avg = Numbers.avg(Arrays.stream(array).boxed().toArray(Integer[]::new));
         /*
          * TODO(Студент): Выполните задание №1
          *
